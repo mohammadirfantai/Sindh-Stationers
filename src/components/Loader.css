@@ -1,0 +1,100 @@
+
+.site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  background-color: #18352f;
+
+  animation: loader-exit 1.4s cubic-bezier(0.72, 0, 0, 1) 1.8s forwards;
+  will-change: transform, border-radius;
+}
+
+/* Logo */
+
+.loader-logo {
+  position: relative;
+  width: 244px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.loader-logo-grey {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.loader-logo-reveal {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+
+  animation: logo-reveal 1.2s cubic-bezier(0.42, 0, 0, 1) 0.2s forwards;
+}
+
+.loader-logo-reveal img {
+  display: block;
+  width: 244px;
+  height: 64px;
+  max-width: none;
+  object-fit: contain;
+}
+
+/* Logo reveal */
+
+@keyframes logo-reveal {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Curved loader exit */
+
+@keyframes loader-exit {
+  0% {
+    transform: translateY(0);
+    border-radius: 0;
+  }
+
+  15% {
+    border-radius: 0 0 40% 40% / 0 0 22% 22%;
+  }
+
+  100% {
+    transform: translateY(-110%);
+    border-radius: 0 0 50% 50% / 0 0 22% 22%;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-loader {
+    animation-duration: 0.01ms;
+    animation-delay: 0ms;
+  }
+
+  .loader-logo-reveal {
+    animation-duration: 0.01ms;
+    animation-delay: 0ms;
+  }
+}

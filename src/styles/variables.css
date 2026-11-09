@@ -1,0 +1,25 @@
+:root {
+  --font-family-heading: "Roslindale Display Condensed", serif;
+  --font-family-body: "Geist", sans-serif;
+  --font-weight-medium: 500;
+
+  --type-size-eyebrow: 14px;
+  --type-size-button: 16px;
+  --type-size-body: 18px;
+  --type-size-card-heading: 36px;
+  --type-size-section-heading: 56px;
+  --type-size-hero-heading: 90px;
+  --type-size-brand-display: 220px;
+
+  --type-line-height-card-eyebrow: 12px;
+  --type-line-height-eyebrow: 16px;
+  --type-line-height-footer: 20px;
+  --type-line-height-body: 24px;
+  --type-line-height-compact: 79%;
+  --type-line-height-display: 100%;
+  --type-line-height-brand-display: 94%;
+
+  --type-letter-spacing-eyebrow: 0.48px;
+  --type-letter-spacing-tight: -0.02em;
+  --type-letter-spacing-brand: -0.04em;
+}

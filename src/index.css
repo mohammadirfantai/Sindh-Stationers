@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "./styles/variables.css";
+@import "./styles/global.css";
+
+/* stylelint-disable at-rule-no-unknown */
+@theme inline {
+  --font-sans: var(--font-family-body);
+  --font-body: var(--font-family-body);
+  --font-heading: var(--font-family-heading);
+}
+/* stylelint-enable at-rule-no-unknown */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ==============================
+   CUSTOM SCROLLBAR
+============================== */
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #FFFFFF #18352f;
+}
+
+/* Chrome, Edge and Safari */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d8d2c74d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #18352f;
+  border-radius: 999px;
+  transition: background-color 0.25s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6f8068;
+}

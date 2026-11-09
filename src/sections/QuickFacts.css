@@ -1,0 +1,161 @@
+
+/* =========================
+   QUICK FACTS TICKER
+========================= */
+
+.quick-facts {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  overflow: hidden;
+  background-color: #18352f;
+
+  /* Right-to-left reveal */
+  clip-path: inset(0 0 0 100%);
+  transition: clip-path 1.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.quick-facts-visible {
+  clip-path: inset(0 0 0 0);
+}
+
+/* =========================
+   MOVING TRACK
+========================= */
+
+.quick-facts-track {
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+
+  animation: quick-facts-scroll 45s linear infinite;
+  animation-play-state: paused;
+
+  will-change: transform;
+}
+
+.quick-facts-visible .quick-facts-track {
+  animation-play-state: running;
+}
+
+/* Repeated Groups */
+
+.quick-facts-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 56px;
+  padding-right: 56px;
+}
+
+/* =========================
+   INDIVIDUAL FACT
+========================= */
+
+.quick-fact-item {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+
+  flex-shrink: 0;
+
+  color: #f5f1e8;
+
+  font-family: var(--font-family-heading);
+  font-size: var(--type-size-card-heading);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-compact);
+  letter-spacing: var(--type-letter-spacing-tight);
+
+  white-space: nowrap;
+}
+
+/* =========================
+   STAR ROTATION
+========================= */
+
+.quick-fact-item img {
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.quick-facts-visible .quick-fact-item img {
+  animation: quick-facts-star-rotate 8s linear infinite;
+}
+
+@keyframes quick-facts-star-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   TICKER ANIMATION
+========================= */
+
+@keyframes quick-facts-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on Hover */
+
+.quick-facts:hover .quick-facts-track {
+  animation-play-state: paused;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .quick-fact-item {
+    gap: 36px;
+  }
+
+  .quick-facts-group {
+    gap: 36px;
+    padding-right: 36px;
+  }
+
+  .quick-fact-item img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .quick-facts {
+    clip-path: none;
+    transition: none;
+  }
+
+  .quick-facts-track {
+    animation: none;
+  }
+
+  .quick-fact-item img {
+    animation: none;
+  }
+}

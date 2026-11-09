@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "Roslindale Display Condensed";
+  src: url("../assets/fonts/roslindale font/Roslindale-DisplayCondensedMedium-Testing.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roslindale Deck Narrow";
+  src: url("../assets/fonts/roslindale font/Roslindale-DeckNarrowBoldItalic-Testing.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("../assets/fonts/Geist Font/Geist-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-medium);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@layer components {
+  .type-navigation,
+  .type-hero-subheading,
+  .type-section-subheading,
+  .type-card-description,
+  .type-stat-description {
+    font-family: var(--font-family-body);
+    font-size: var(--type-size-body);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--type-line-height-body);
+    letter-spacing: var(--type-letter-spacing-tight);
+  }
+
+  .type-navigation {
+    line-height: var(--type-line-height-compact);
+  }
+
+  .type-eyebrow,
+  .type-section-eyebrow {
+    font-family: var(--font-family-body);
+    font-size: var(--type-size-eyebrow);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--type-line-height-eyebrow);
+    letter-spacing: var(--type-letter-spacing-eyebrow);
+  }
+
+  .type-hero-heading {
+    font-family: var(--font-family-heading);
+    font-size: var(--type-size-hero-heading);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--type-line-height-display);
+    letter-spacing: var(--type-letter-spacing-tight);
+  }
+
+  .type-button,
+  .type-card-button {
+    font-family: var(--font-family-body);
+    font-size: var(--type-size-button);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--type-line-height-body);
+    letter-spacing: var(--type-letter-spacing-tight);
+  }
+
+  .type-section-heading,
+  .type-stat-number {
+    font-family: var(--font-family-heading);
+    font-size: var(--type-size-section-heading);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--type-line-height-display);
+    letter-spacing: var(--type-letter-spacing-tight);
+  }
+
+  .type-quick-facts-heading,
+  .type-card-heading,
+  .type-footer-heading {
+    font-family: var(--font-family-heading);
+    font-size: var(--type-size-card-heading);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--type-line-height-compact);
+    letter-spacing: var(--type-letter-spacing-tight);
+  }
+
+  .type-card-eyebrow {
+    font-family: var(--font-family-body);
+    font-size: var(--type-size-eyebrow);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--type-line-height-card-eyebrow);
+    letter-spacing: var(--type-letter-spacing-tight);
+  }
+
+  .type-footer-meta {
+    font-family: var(--font-family-body);
+    font-size: var(--type-size-button);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--type-line-height-footer);
+    letter-spacing: var(--type-letter-spacing-tight);
+  }
+
+  .type-brand-display {
+    font-family: var(--font-family-heading);
+    font-size: var(--type-size-brand-display);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--type-line-height-brand-display);
+    letter-spacing: var(--type-letter-spacing-brand);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  background-color: #f5f1e8;
+}
+
+html {
+  scrollbar-gutter: auto;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 1px;
+  background-color: currentColor;
+  content: "";
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 350ms cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link-underline:hover::after,
+  a:hover .link-underline::after {
+    transform: scaleX(1);
+  }
+}
+
+.link-underline:focus-visible::after,
+a:focus-visible .link-underline::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-underline::after {
+    transition: none;
+  }
+}

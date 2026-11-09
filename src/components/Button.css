@@ -1,0 +1,233 @@
+
+/* ==============================
+   BASE BUTTON
+============================== */
+
+.button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  min-height: 48px;
+  padding: 4px 4px 4px 16px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-button);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-body);
+  letter-spacing: var(--type-letter-spacing-tight);
+
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+/* ==============================
+   BACKGROUND FILL
+============================== */
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: right;
+
+  transition: transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+/* ==============================
+   TEXT ROLLING ANIMATION
+============================== */
+
+.button-text {
+  position: relative;
+  z-index: 1;
+
+  flex: 1;
+  display: block;
+  overflow: hidden;
+}
+
+.button-text-inner {
+  display: flex;
+  align-items: center;
+}
+
+.button-text-clone {
+  position: absolute;
+  inset: 0;
+}
+
+.button-letter {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.button-letter-inner {
+  display: inline-block;
+
+  transform: translateY(0);
+
+  transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+  transition-delay: calc(var(--letter-index) * 0.025s);
+}
+
+.button-text-clone .button-letter-inner {
+  transform: translateY(110%);
+}
+
+.button:hover .button-text-inner:first-child .button-letter-inner {
+  transform: translateY(-110%);
+}
+
+.button:hover .button-text-clone .button-letter-inner {
+  transform: translateY(0);
+}
+
+/* ==============================
+   ARROW BOX
+============================== */
+
+.button-icon {
+  position: relative;
+  z-index: 1;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  border-radius: 8px;
+
+  transition: background-color 0.45s ease;
+}
+
+.button-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+
+  transition: filter 0.45s ease;
+}
+
+/* ==============================
+   CREAM VARIANT
+============================== */
+
+.button-cream {
+  color: #18352f;
+  background-color: #f5f1e8;
+}
+
+.button-cream::before {
+  background-color: #18352f;
+}
+
+.button-cream .button-icon {
+  background-color: #18352f;
+}
+
+.button-cream .button-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.button-cream:hover {
+  color: #f5f1e8;
+}
+
+.button-cream:hover .button-icon {
+  background-color: #f5f1e8;
+}
+
+.button-cream:hover .button-icon img {
+  filter: brightness(0) saturate(100%)
+    invert(17%) sepia(17%) saturate(1000%)
+    hue-rotate(100deg) brightness(95%);
+}
+
+/* ==============================
+   FOREST VARIANT
+============================== */
+
+.button-forest {
+  color: #f5f1e8;
+  background-color: #18352f;
+}
+
+.button-forest::before {
+  background-color: #f5f1e8;
+}
+
+.button-forest .button-icon {
+  background-color: #f5f1e8;
+}
+
+.button-forest .button-icon img {
+  filter: brightness(0) saturate(100%)
+    invert(17%) sepia(17%) saturate(1000%)
+    hue-rotate(100deg) brightness(95%);
+}
+
+.button-forest:hover {
+  color: #18352f;
+}
+
+.button-forest:hover .button-icon {
+  background-color: #18352f;
+}
+
+.button-forest:hover .button-icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* ==============================
+   KEYBOARD ACCESSIBILITY
+============================== */
+
+.button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* ==============================
+   REDUCED MOTION
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button::before,
+  .button-letter-inner,
+  .button-icon,
+  .button-icon img {
+    transition: none;
+  }
+
+  .button-text-clone {
+    display: none;
+  }
+
+  .button:hover .button-text-inner:first-child .button-letter-inner {
+    transform: none;
+  }
+}

@@ -1,0 +1,205 @@
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+
+.products-section {
+  width: 100%;
+  padding: 60px 0 80px;
+  background-color: #f5f1e8;
+}
+
+.products-container {
+  width: min(1320px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.products-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.products-heading-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.products-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-eyebrow);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-eyebrow);
+  letter-spacing: var(--type-letter-spacing-eyebrow);
+}
+
+.products-eyebrow-dot {
+  width: 5px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #18352f;
+}
+
+.products-heading {
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-heading);
+  font-size: var(--type-size-section-heading);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-display);
+  letter-spacing: var(--type-letter-spacing-tight);
+}
+
+.products-description {
+  max-width: 390px;
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-body);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-body);
+  letter-spacing: var(--type-letter-spacing-tight);
+  text-align: right;
+}
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* =========================
+   HEADER REVEAL
+========================= */
+
+.products-eyebrow,
+.products-heading,
+.products-description {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(14px);
+}
+
+.products-visible .products-eyebrow {
+  animation: products-fade-up 0.5s
+    cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.products-visible .products-heading {
+  animation: products-fade-up 0.65s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.1s forwards;
+}
+
+.products-visible .products-description {
+  animation: products-fade-up 0.55s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.2s forwards;
+}
+
+/* =========================
+   INDIVIDUAL CARD REVEAL
+========================= */
+
+.product-card-reveal {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(24px);
+}
+
+.product-card-reveal.is-visible {
+  animation: product-card-reveal 0.7s
+    cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: calc(var(--card-index) * 0.12s);
+}
+
+@keyframes products-fade-up {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes product-card-reveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .products-section {
+    padding: 48px 0 64px;
+  }
+
+  .products-container {
+    width: calc(100% - 40px);
+  }
+
+  .products-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .products-description {
+    max-width: 520px;
+    text-align: left;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .products-eyebrow,
+  .products-heading,
+  .products-description,
+  .product-card-reveal {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none;
+  }
+}

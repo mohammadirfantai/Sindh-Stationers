@@ -1,0 +1,850 @@
+/* ========================================
+   HOW IT WORKS SECTION
+======================================== */
+
+.how-it-works {
+  width: 100%;
+  padding: 60px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.how-it-works-container {
+  width: min(1320px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.how-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.how-section-header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.how-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-eyebrow);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-eyebrow);
+  letter-spacing: var(--type-letter-spacing-eyebrow);
+}
+
+.how-eyebrow span {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #18352f;
+}
+
+.how-section-header h2 {
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-heading);
+  font-size: var(--type-size-section-heading);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-display);
+  letter-spacing: var(--type-letter-spacing-tight);
+}
+
+.how-header-description {
+  max-width: 390px;
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-body);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-body);
+  letter-spacing: var(--type-letter-spacing-tight);
+  text-align: right;
+}
+
+/* ========================================
+   STEP CARDS GRID
+======================================== */
+
+.how-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.how-step-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 24px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #fffdf8;
+}
+
+/* ========================================
+   VISUAL CONTAINERS
+======================================== */
+
+.how-visual {
+  position: relative;
+  width: 100%;
+  height: 259px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* ========================================
+   STEP 1: PRODUCT SELECTION
+======================================== */
+
+.how-visual-products {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background: #f5f5f5;
+}
+
+.selection-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 79px;
+  flex-shrink: 0;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 0 30px -4px rgba(0, 0, 0, 0.03),
+    0 2px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+.selection-product > img {
+  display: block;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.selection-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.selection-product-name {
+  color: #202522;
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.selection-product-description {
+  color: #7d7e80;
+  font-family: var(--font-family-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+}
+
+/* ========================================
+   STEP 2: WHATSAPP CHAT
+======================================== */
+
+.how-visual-chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  background: #f8f6f0;
+}
+
+/* Outgoing Message */
+
+.chat-outgoing {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.chat-outgoing-bubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 223px;
+  min-height: 95px;
+  padding: 10px 14px;
+  border-radius: 16px 0 16px 16px;
+  background: #d9fdd3;
+}
+
+.chat-outgoing-bubble p {
+  margin: 0;
+  color: #202522;
+  font-family: var(--font-family-body);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+}
+
+.chat-message-meta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  color: #6b7280;
+  font-family: var(--font-family-body);
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.chat-double-tick {
+  color: #53a9e8;
+  letter-spacing: -3px;
+}
+
+.chat-user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #18352f;
+  color: #fffdf8;
+}
+
+/* Incoming Message */
+
+.chat-incoming {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.chat-father-avatar {
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-incoming-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 240px;
+  min-height: 115px;
+  padding: 10px 14px;
+  border-radius: 0 16px 16px 16px;
+  background: #fff;
+}
+
+.chat-father-name {
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  line-height: 14px;
+  letter-spacing: -0.02em;
+}
+
+.chat-incoming-bubble p {
+  margin: 0;
+  color: #334155;
+  font-family: var(--font-family-body);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+}
+
+.chat-message-time {
+  align-self: flex-end;
+  color: #6b7280;
+  font-family: var(--font-family-body);
+  font-size: 10px;
+  line-height: 12px;
+}
+
+/* ========================================
+   STEP 3: ORDER TRACKER
+======================================== */
+
+.how-visual-order {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #f5f5f5;
+}
+
+.order-tracker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 18px;
+}
+
+.order-tracker-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #202522;
+  font-family: var(--font-family-body);
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+}
+
+.order-tracker-count {
+  color: #7d7e80;
+  font-family: var(--font-family-body);
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.order-tracker-divider {
+  width: 100%;
+  height: 1px;
+  flex-shrink: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.order-product-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 80px;
+  flex-shrink: 0;
+  padding: 6px;
+  border-radius: 7.2px;
+  background: #f9f9f9;
+  box-shadow:
+    0 0 6.04px 0.75px rgba(0, 0, 0, 0.04),
+    0 16px 12px -2px rgba(0, 0, 0, 0.02);
+}
+
+.order-product-card > img {
+  display: block;
+  width: 74px;
+  height: 68px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.order-product-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.order-product-name {
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+}
+
+.order-confirmed-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 24px;
+  border-radius: 8px;
+  background: #18352f;
+  color: #fffdf8;
+  font-family: var(--font-family-body);
+  font-size: 9px;
+  font-weight: var(--font-weight-medium);
+  line-height: 11.8px;
+  letter-spacing: -0.09px;
+}
+
+/* Skeleton Products */
+
+.order-skeleton-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 80px;
+  flex-shrink: 0;
+  padding: 6px;
+  border: 1px dashed #ebebeb;
+  border-radius: 7.2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skeleton-image {
+  width: 74px;
+  height: 68px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #ebebeb;
+}
+
+.skeleton-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-content span {
+  display: block;
+  width: 85%;
+  height: 10px;
+  border-radius: 20px;
+  background: #ebebeb;
+}
+
+.skeleton-content span:last-child {
+  width: 55%;
+}
+
+/* ========================================
+   STEP CARD CONTENT
+======================================== */
+
+.how-step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.how-step-content h3 {
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-heading);
+  font-size: var(--type-size-card-heading);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-compact);
+  letter-spacing: var(--type-letter-spacing-tight);
+}
+
+.how-step-content p {
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-body);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-body);
+  letter-spacing: var(--type-letter-spacing-tight);
+}
+
+/* ========================================
+   BOTTOM CTA
+======================================== */
+
+.how-bottom-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  min-height: 80px;
+  margin-top: 16px;
+  padding: 12px 16px 12px 24px;
+  border-radius: 24px;
+  background: #fffdf8;
+}
+
+.how-bottom-cta p {
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-body);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-body);
+  letter-spacing: var(--type-letter-spacing-tight);
+}
+
+/* ========================================
+   SCROLL REVEAL: INITIAL STATES
+======================================== */
+
+.how-section-header .how-eyebrow,
+.how-section-header h2,
+.how-section-header .how-header-description {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(14px);
+}
+
+.how-step-card {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(24px);
+}
+
+.how-bottom-cta {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(20px);
+}
+
+/* ========================================
+   SCROLL REVEAL: HEADER
+======================================== */
+
+.how-section-header.is-visible .how-eyebrow {
+  animation: how-fade-up 0.5s
+    cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.how-section-header.is-visible h2 {
+  animation: how-fade-up 0.65s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.1s forwards;
+}
+
+.how-section-header.is-visible .how-header-description {
+  animation: how-fade-up 0.55s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.2s forwards;
+}
+
+/* ========================================
+   SCROLL REVEAL: STEP CARDS
+======================================== */
+
+.how-step-card.is-visible {
+  animation: how-card-reveal 0.75s
+    cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+/* Each card starts 500ms after the previous one */
+
+.how-steps-grid .how-step-card:nth-child(1).is-visible {
+  animation-delay: 0s;
+}
+
+.how-steps-grid .how-step-card:nth-child(2).is-visible {
+  animation-delay: 0.5s;
+}
+
+.how-steps-grid .how-step-card:nth-child(3).is-visible {
+  animation-delay: 1s;
+}
+
+/* ========================================
+   STEP 1: PRODUCT ROW ANIMATIONS
+======================================== */
+
+.selection-product {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(12px);
+}
+
+.how-step-card.is-visible .selection-product {
+  animation: visual-reveal 0.65s
+    cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.how-step-card.is-visible .selection-product:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.how-step-card.is-visible .selection-product:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.how-step-card.is-visible .selection-product:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+/* ========================================
+   STEP 2: CHAT POP ANIMATIONS
+======================================== */
+
+.chat-outgoing,
+.chat-incoming {
+  opacity: 0;
+}
+
+/* Outgoing message pops in from the right */
+
+.how-step-card.is-visible .chat-outgoing {
+  animation: chat-pop-out 0.65s
+    cubic-bezier(0.22, 1.4, 0.36, 1) 0.25s forwards;
+}
+
+/* Incoming message pops in from the left */
+
+.how-step-card.is-visible .chat-incoming {
+  animation: chat-pop-in 0.65s
+    cubic-bezier(0.22, 1.4, 0.36, 1) 0.75s forwards;
+}
+
+@keyframes chat-pop-out {
+  0% {
+    opacity: 0;
+    transform: translate(24px, 12px) scale(0.82);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate(-3px, -2px) scale(1.035);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes chat-pop-in {
+  0% {
+    opacity: 0;
+    transform: translate(-24px, 12px) scale(0.82);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate(3px, -2px) scale(1.035);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* ========================================
+   STEP 3: ORDER TRACKER ANIMATIONS
+======================================== */
+
+.order-tracker-header,
+.order-tracker-divider,
+.order-product-card,
+.order-skeleton-card {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(12px);
+}
+
+.how-step-card.is-visible .order-tracker-header {
+  animation: visual-reveal 0.5s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.15s forwards;
+}
+
+.how-step-card.is-visible .order-tracker-divider {
+  animation: visual-reveal 0.5s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.3s forwards;
+}
+
+.how-step-card.is-visible .order-product-card {
+  animation: visual-reveal 0.65s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.45s forwards;
+}
+
+.how-step-card.is-visible .order-skeleton-card-1 {
+  animation: visual-reveal 0.6s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.6s forwards;
+}
+
+.how-step-card.is-visible .order-skeleton-card-2 {
+  animation: visual-reveal 0.6s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.75s forwards;
+}
+
+/* ========================================
+   BOTTOM CTA REVEAL
+======================================== */
+
+.how-bottom-cta.is-visible {
+  animation: how-card-reveal 0.7s
+    cubic-bezier(0.76, 0, 0.24, 1) 0s forwards;
+}
+
+/* ========================================
+   SHARED KEYFRAMES
+======================================== */
+
+@keyframes how-fade-up {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes how-card-reveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes visual-reveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+  .how-steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .how-step-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 48px 0;
+  }
+
+  .how-it-works-container {
+    width: calc(100% - 40px);
+  }
+
+  .how-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .how-header-description {
+    max-width: 520px;
+    text-align: left;
+  }
+
+  .how-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .how-step-card:last-child {
+    grid-column: auto;
+  }
+
+  .how-bottom-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  /* Mobile cards enter separately, so use shorter delays */
+
+  .how-steps-grid .how-step-card:nth-child(1).is-visible {
+    animation-delay: 0s;
+  }
+
+  .how-steps-grid .how-step-card:nth-child(2).is-visible {
+    animation-delay: 0.5s;
+  }
+
+  .how-steps-grid .how-step-card:nth-child(3).is-visible {
+    animation-delay: 1s;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-section-header h2 {
+    font-size: clamp(38px, 10vw, 48px);
+  }
+
+  .how-step-card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .how-step-content {
+    margin-top: 24px;
+  }
+
+  .how-step-content h3 {
+    font-size: 30px;
+  }
+
+  .how-step-content p {
+    font-size: 16px;
+  }
+
+  .how-bottom-cta {
+    gap: 16px;
+  }
+
+  .chat-outgoing-bubble {
+    width: min(223px, calc(100% - 36px));
+  }
+
+  .chat-incoming-bubble {
+    width: min(240px, calc(100% - 36px));
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .how-section-header .how-eyebrow,
+  .how-section-header h2,
+  .how-section-header .how-header-description,
+  .how-step-card,
+  .how-bottom-cta,
+  .selection-product,
+  .chat-outgoing,
+  .chat-incoming,
+  .order-tracker-header,
+  .order-tracker-divider,
+  .order-product-card,
+  .order-skeleton-card {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,374 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.about-us {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #f5f1e8;
+}
+
+.about-us-container {
+  width: min(1320px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.about-us-main {
+  display: grid;
+  grid-template-columns: 580px minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+}
+
+/* =========================
+   FATHER'S IMAGE
+========================= */
+
+.about-us-image {
+  position: relative;
+  width: 100%;
+  height: 606px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.about-us-image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us-founder-name {
+  position: absolute;
+  right: 36px;
+  bottom: 32px;
+  color: #ffffff;
+  font-family: "Dancing Script", cursive;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36.4px;
+  letter-spacing: -0.03em;
+  -webkit-text-stroke: 0.3px #ffffff;
+}
+
+/* =========================
+   ABOUT CONTENT
+========================= */
+
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-us-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 12px;
+}
+
+.about-us-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-eyebrow);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-eyebrow);
+  letter-spacing: var(--type-letter-spacing-eyebrow);
+}
+
+.about-us-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #18352f;
+}
+
+.about-us-heading h2 {
+  width: 455px;
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-heading);
+  font-size: var(--type-size-section-heading);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-display);
+  letter-spacing: var(--type-letter-spacing-tight);
+}
+
+/* Divider */
+
+.about-us-divider {
+  width: 92px;
+  height: 1.8px;
+  margin-top: 20px;
+  background-color: #18352f;
+}
+
+/* Description */
+
+.about-us-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.about-us-description p {
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-body);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-body);
+  letter-spacing: var(--type-letter-spacing-tight);
+}
+
+/* WhatsApp Button */
+
+.about-us-button {
+  align-self: flex-start;
+  margin-top: 32px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.about-us-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.about-us-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 20px 30px 10px 10px;
+  border-top: 1px solid #d8d2c7;
+}
+
+.about-us-stat h3 {
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-heading);
+  font-size: var(--type-size-section-heading);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-display);
+  letter-spacing: var(--type-letter-spacing-tight);
+}
+
+.about-us-stat p {
+  margin: 0;
+  color: #18352f;
+  font-family: var(--font-family-body);
+  font-size: var(--type-size-body);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-line-height-body);
+  letter-spacing: var(--type-letter-spacing-tight);
+}
+
+/* =========================
+   SCROLL REVEAL ANIMATIONS
+========================= */
+
+/* Initial States */
+
+.about-us-image,
+.about-us-eyebrow,
+.about-us-heading h2,
+.about-us-divider,
+.about-us-description p,
+.about-us-button {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(20px);
+}
+
+/* Father's Image */
+
+.about-visible .about-us-image {
+  animation: about-reveal 0.8s
+    cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+/* Eyebrow */
+
+.about-visible .about-us-eyebrow {
+  animation: about-reveal 0.5s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.1s forwards;
+}
+
+/* Heading */
+
+.about-visible .about-us-heading h2 {
+  animation: about-reveal 0.65s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.2s forwards;
+}
+
+/* Divider */
+
+.about-visible .about-us-divider {
+  animation: about-reveal 0.5s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.3s forwards;
+}
+
+/* Description Paragraphs */
+
+.about-visible .about-us-description p {
+  animation: about-reveal 0.6s
+    cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.about-visible .about-us-description p:nth-child(1) {
+  animation-delay: 0.35s;
+}
+
+.about-visible .about-us-description p:nth-child(2) {
+  animation-delay: 0.45s;
+}
+
+.about-visible .about-us-description p:nth-child(3) {
+  animation-delay: 0.55s;
+}
+
+/* WhatsApp Button */
+
+.about-visible .about-us-button {
+  animation: about-reveal 0.6s
+    cubic-bezier(0.76, 0, 0.24, 1) 0.65s forwards;
+}
+
+/* Stats Reveal */
+
+.about-us-stat {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(20px);
+}
+
+.stats-visible .about-us-stat {
+  animation: about-reveal 0.65s
+    cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: calc(var(--stat-index, 0) * 0.12s);
+}
+
+.stats-visible .about-us-stat:nth-child(1) {
+  --stat-index: 0;
+}
+
+.stats-visible .about-us-stat:nth-child(2) {
+  --stat-index: 1;
+}
+
+.stats-visible .about-us-stat:nth-child(3) {
+  --stat-index: 2;
+}
+
+.stats-visible .about-us-stat:nth-child(4) {
+  --stat-index: 3;
+}
+
+/* Shared Animation */
+
+@keyframes about-reveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .about-us-main {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .about-us-image {
+    height: 540px;
+  }
+
+  .about-us-stat {
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    padding: 56px 0;
+  }
+
+  .about-us-container {
+    width: calc(100% - 32px);
+  }
+
+  .about-us-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-us-image {
+    height: auto;
+    aspect-ratio: 580 / 612;
+  }
+
+  .about-us-heading h2 {
+    width: 100%;
+  }
+
+  .about-us-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 24px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-stat {
+    padding: 16px 8px 8px;
+  }
+
+  .about-us-founder-name {
+    right: 16px;
+    bottom: 16px;
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-us-image,
+  .about-us-eyebrow,
+  .about-us-heading h2,
+  .about-us-divider,
+  .about-us-description p,
+  .about-us-button,
+  .about-us-stat {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none;
+  }
+}

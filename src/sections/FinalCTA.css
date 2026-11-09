@@ -249,6 +249,38 @@
   }
 }
 
+@media (max-width: 767px) {
+  .final-cta-container {
+    align-items: stretch;
+  }
+
+  .final-cta-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .final-cta-content h2 {
+    font-size: clamp(38px, 10vw, 44px);
+  }
+
+  .final-cta-description {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .final-cta-content > .button {
+    width: 100%;
+  }
+
+  .final-cta-stats {
+    width: 100%;
+  }
+
+  .final-cta-stat h3 {
+    font-size: clamp(38px, 10vw, 44px);
+  }
+}
+
 /* ========================================
    REDUCED MOTION
 ======================================== */

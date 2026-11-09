@@ -89,7 +89,7 @@
 /* Heading */
 
 .hero-heading {
-  max-width: 1150px;
+  max-width: 888px;
   margin: 0 0 18px;
 
   color: #f5f1e8;
@@ -98,6 +98,13 @@
   font-weight: var(--font-weight-medium);
   line-height: var(--type-line-height-display);
   letter-spacing: var(--type-letter-spacing-tight);
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.hero-text-word {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 /* Description */
@@ -295,6 +302,14 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1100px) {
+  .hero {
+    height: 820px;
+    min-height: 820px;
+    max-height: 820px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     height: auto;
@@ -346,6 +361,42 @@
 
   .hero-box-main {
     width: min(90%, 420px);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-heading {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(38px, 11vw, 46px);
+    line-height: 0.98;
+  }
+
+  .hero-eyebrow {
+    width: 100%;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons > .button,
+  .hero-secondary-button {
+    width: 100%;
   }
 }
 

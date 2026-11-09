@@ -153,7 +153,6 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
 }
 
 .link-underline {
@@ -190,5 +189,24 @@ a:focus-visible .link-underline::after {
 @media (prefers-reduced-motion: reduce) {
   .link-underline::after {
     transition: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --type-size-body: 16px;
+    --type-size-card-heading: 30px;
+    --type-size-section-heading: 46px;
+    --type-size-hero-heading: 68px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --type-size-body: 16px;
+    --type-size-card-heading: 28px;
+    --type-size-section-heading: clamp(38px, 10vw, 44px);
+    --type-size-hero-heading: clamp(38px, 10vw, 44px);
+    --type-line-height-body: 1.55;
   }
 }

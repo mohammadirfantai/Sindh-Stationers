@@ -22,9 +22,12 @@
 /* Logo */
 
 .loader-logo {
+  --loader-logo-width: 244px;
+  --loader-logo-height: 64px;
+
   position: relative;
-  width: 244px;
-  height: 64px;
+  width: var(--loader-logo-width);
+  height: var(--loader-logo-height);
   flex-shrink: 0;
 }
 
@@ -49,10 +52,24 @@
 
 .loader-logo-reveal img {
   display: block;
-  width: 244px;
-  height: 64px;
+  width: var(--loader-logo-width);
+  height: var(--loader-logo-height);
   max-width: none;
   object-fit: contain;
+}
+
+@media (max-width: 1023px) {
+  .loader-logo {
+    --loader-logo-width: 210px;
+    --loader-logo-height: 55px;
+  }
+}
+
+@media (max-width: 767px) {
+  .loader-logo {
+    --loader-logo-width: 190px;
+    --loader-logo-height: 50px;
+  }
 }
 
 /* Logo reveal */

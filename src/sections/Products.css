@@ -181,7 +181,7 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 767px) {
   .products-grid {
     grid-template-columns: 1fr;
     gap: 16px;

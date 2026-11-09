@@ -220,6 +220,7 @@
 
   .brands-logos {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 8px;
   }
 
   .brand-item {

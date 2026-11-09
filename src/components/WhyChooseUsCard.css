@@ -102,6 +102,16 @@
   }
 }
 
+@media (max-width: 767px) {
+  .why-card-content h3 {
+    font-size: 28px;
+  }
+
+  .why-card-content p {
+    font-size: 16px;
+  }
+}
+
 /* =========================
    REDUCED MOTION
 ========================= */

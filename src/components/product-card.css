@@ -14,7 +14,7 @@
   overflow: hidden;
   isolation: isolate;
 
-  border-radius: 14px;
+  border-radius: 16px;
   background-color: #d8d2c7;
 }
 
@@ -184,6 +184,12 @@
 
   .product-card-content {
     padding: 20px;
+  }
+}
+
+@media (min-width: 521px) and (max-width: 767px) {
+  .product-card {
+    height: 440px;
   }
 }
 

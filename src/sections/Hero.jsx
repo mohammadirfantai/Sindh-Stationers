@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import "./Hero.css";
 import Button from "../components/Button";
 import useLoaderComplete from "../hooks/useLoaderComplete";
@@ -7,35 +8,50 @@ import mainBox from "../assets/images/hero-boxes/Main-Box.webp";
 
 // Animate heading and eyebrow letter by letter
 function splitText(text, startIndex = 0) {
-  return [...text].map((letter, index) => (
-    <span
-      className="hero-letter"
-      key={`${startIndex}-${index}`}
-      style={{ "--letter-index": startIndex + index }}
-    >
-      {letter === " " ? "\u00A0" : letter}
-    </span>
-  ));
+  const words = text.split(" ");
+  let letterIndex = startIndex;
+
+  return words.map((word, wordIndex) => {
+    const wordStart = letterIndex;
+    letterIndex += word.length + 1;
+
+    return (
+      <Fragment key={`${startIndex}-word-${wordIndex}`}>
+        <span className="hero-text-word">
+          {[...word].map((letter, index) => (
+            <span
+              className="hero-letter"
+              key={`${wordStart}-${index}`}
+              style={{ "--letter-index": wordStart + index }}
+            >
+              {letter}
+            </span>
+          ))}
+        </span>
+        {wordIndex < words.length - 1 ? " " : null}
+      </Fragment>
+    );
+  });
 }
 
 // Animate description word by word
 function splitWords(text) {
   return text.split(" ").map((word, index) => (
-    <span
-      className="hero-word"
-      key={index}
-      style={{ "--word-index": index }}
-    >
-      {word}&nbsp;
-    </span>
+    <Fragment key={index}>
+      <span
+        className="hero-word"
+        style={{ "--word-index": index }}
+      >
+        {word}
+      </span>{" "}
+    </Fragment>
   ));
 }
 
 function Hero() {
   const loaderComplete = useLoaderComplete();
 
-  const headingLineOne = "High Quality Packing Tape";
-  const headingLineTwo = "Made to Keep Things Secure.";
+  const heading = "High Quality Packing Tape Made to Keep Things Secure.";
 
   return (
     <section
@@ -58,9 +74,7 @@ function Hero() {
         </p>
 
         <h1 className="hero-heading">
-          {splitText(headingLineOne)}
-          <br />
-          {splitText(headingLineTwo, headingLineOne.length)}
+          {splitText(heading)}
         </h1>
 
         <p className="hero-description">

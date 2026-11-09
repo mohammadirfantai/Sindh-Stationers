@@ -1,4 +1,6 @@
 
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import "./QuickFacts.css";
 
@@ -56,7 +58,7 @@ function QuickFacts() {
             {facts.map((fact, index) => (
               <div className="quick-fact-item" key={`${group}-${index}`}>
                 <span>{fact}</span>
-                <img src={StarIcon} alt="" />
+                <img src={StarIcon.src} alt="" />
               </div>
             ))}
           </div>

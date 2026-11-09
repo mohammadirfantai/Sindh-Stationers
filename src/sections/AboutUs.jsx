@@ -1,4 +1,6 @@
 
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import "./AboutUs.css";
 
@@ -30,12 +32,7 @@ function AboutUs() {
 
   const [isVisible, setIsVisible] = useState(false);
   const [statsVisible, setStatsVisible] = useState(false);
-  const [progress, setProgress] = useState(() => {
-    if (typeof window === "undefined") return 0;
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      ? 1
-      : 0;
-  });
+  const [progress, setProgress] = useState(0);
 
   const message =
     "Assalamualaikum, mujhe packing tape ki current price aur details maloom karni hain.";
@@ -98,7 +95,10 @@ function AboutUs() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion) {
+      const animationFrame = requestAnimationFrame(() => setProgress(1));
+      return () => cancelAnimationFrame(animationFrame);
+    }
 
     const duration = 1800;
     let animationFrame;
@@ -158,7 +158,7 @@ function AboutUs() {
           {/* Father's Image */}
           <div className="about-us-image">
             <img
-              src={FatherImage}
+              src={FatherImage.src}
               alt="Mohammad Irfan Tai"
             />
 
@@ -182,8 +182,8 @@ function AboutUs() {
 
             <div className="about-us-description">
               <p>
-                Sindh Stationers is a packing tape supplier based in Urdu
-                Bazaar, Karachi, serving customers across the city. We supply
+                Sindh Stationers is a packing tape supplier based in Karachi,
+                serving customers across the city. We supply
                 packing tape for everyday packing, shops, businesses, online
                 sellers, offices, and commercial use.
               </p>

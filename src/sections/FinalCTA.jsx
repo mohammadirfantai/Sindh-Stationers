@@ -1,4 +1,6 @@
 
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import "./FinalCTA.css";
 import Button from "../components/Button";
@@ -109,7 +111,7 @@ function FinalCTA() {
       ref={sectionRef}
       className="final-cta"
       id="contact"
-      style={{ backgroundImage: `url("${finalCtaBg}")` }}
+      style={{ backgroundImage: `url("${finalCtaBg.src}")` }}
     >
       <div className="final-cta-overlay" />
 

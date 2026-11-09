@@ -1,4 +1,6 @@
 
+"use client";
+
 import { useEffect, useState } from "react";
 import "./Loader.css";
 
@@ -46,10 +48,10 @@ function Loader() {
       }}
     >
       <div className="loader-logo">
-        <img className="loader-logo-grey" src={GreyLogo} alt="" />
+        <img className="loader-logo-grey" src={GreyLogo.src} alt="" />
 
         <div className="loader-logo-reveal">
-          <img src={WhiteLogo} alt="Sindh Stationers" />
+          <img src={WhiteLogo.src} alt="Sindh Stationers" />
         </div>
       </div>
     </div>

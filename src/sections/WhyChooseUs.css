@@ -163,9 +163,9 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
 
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(64px);
-  -webkit-backdrop-filter: blur(64px);
+  background: rgba(18, 18, 18, 0.427);
+  backdrop-filter: blur(600px);
+  -webkit-backdrop-filter: blur(600px);
 }
 
 .no-hidden-costs-info {

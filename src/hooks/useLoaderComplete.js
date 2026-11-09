@@ -1,9 +1,9 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function useLoaderComplete() {
   const [complete, setComplete] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleComplete = () => {
       setComplete(true);
     };

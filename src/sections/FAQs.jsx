@@ -1,4 +1,6 @@
 
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import "./FAQs.css";
 import Button from "../components/Button";

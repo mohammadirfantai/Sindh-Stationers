@@ -1,4 +1,6 @@
 
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import "./WhyChooseUs.css";
 
@@ -111,7 +113,7 @@ function WhyChooseUs() {
           <article className="no-hidden-costs-card">
             <div
               className="no-hidden-costs-background"
-              style={{ backgroundImage: `url("${WhyUsCardBg}")` }}
+              style={{ backgroundImage: `url("${WhyUsCardBg.src}")` }}
             />
 
             <div className="no-hidden-costs-content">

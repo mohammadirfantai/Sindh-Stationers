@@ -49,7 +49,7 @@ function Button({
       </span>
 
       <span className="button-icon">
-        <img src={arrowIcon} alt="" />
+        <img src={arrowIcon.src} alt="" />
       </span>
     </a>
   );

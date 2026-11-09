@@ -1,4 +1,6 @@
 
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import "./Footer.css";
 
@@ -104,7 +106,7 @@ function Footer() {
 
           <div className="footer-brand">
             <a href="#home" className="footer-logo">
-              <img src={darkLogo} alt="Sindh Stationers" />
+              <img src={darkLogo.src} alt="Sindh Stationers" />
             </a>
 
             <p className="footer-brand-description">
@@ -123,7 +125,7 @@ function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={social.icon} alt="" />
+                    <img src={social.icon.src} alt="" />
                   </a>
                 ) : (
                   <span
@@ -132,7 +134,7 @@ function Footer() {
                     aria-label={social.label}
                     title={`${social.label} link will be added`}
                   >
-                    <img src={social.icon} alt="" />
+                    <img src={social.icon.src} alt="" />
                   </span>
                 )
               )}
@@ -179,7 +181,7 @@ function Footer() {
             <ul>
               <li>
                 <a href="tel:+923002279528">
-                  <img src={callIcon} alt="" />
+                  <img src={callIcon.src} alt="" />
                   <span className="link-underline">+92-300-2279528</span>
                 </a>
               </li>
@@ -190,7 +192,7 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={emailIcon} alt="" />
+                  <img src={emailIcon.src} alt="" />
                   <span className="link-underline">
                     sindhstationers@gmail.com
                   </span>
@@ -198,7 +200,7 @@ function Footer() {
               </li>
 
               <li className="footer-delivery-info">
-                <img src={locationIcon} alt="" />
+                <img src={locationIcon.src} alt="" />
                 <span>Deliveries Across Karachi</span>
               </li>
             </ul>

@@ -14,9 +14,7 @@ import Footer from "./sections/Footer";
 function App() {
   return (
     <>
-    <Loader />
-
-{/* Website Starts From Here */}
+      <Loader />
       <Navbar />
       <Hero />
       <BrandsWeSupply />

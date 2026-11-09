@@ -22,9 +22,12 @@ function ProductCard({
       style={style}
       data-index={index}
     >
-      <div
+      <img
         className="product-card-background"
-        style={{ backgroundImage: `url("${image}")` }}
+        src={image.src}
+        alt={`${name} product photo`}
+        loading="lazy"
+        decoding="async"
       />
 
       <div className="product-card-gradient" />

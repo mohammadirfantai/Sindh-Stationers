@@ -5,7 +5,7 @@ function WhyChooseUsCard({ icon, title, description, iconWidth, iconHeight }) {
     <article className="why-card">
       <img
         className="why-card-icon"
-        src={icon}
+        src={icon.src}
         alt=""
         style={{ width: iconWidth, height: iconHeight }}
       />

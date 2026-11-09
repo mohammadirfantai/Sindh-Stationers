@@ -1,4 +1,6 @@
 
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import "./BrandsWeSupply.css";
 
@@ -78,7 +80,7 @@ function BrandsWeSupply() {
               style={{ "--brand-index": index }}
             >
               <img
-                src={brand.logo}
+                src={brand.logo.src}
                 alt={`${brand.name} logo`}
               />
             </div>

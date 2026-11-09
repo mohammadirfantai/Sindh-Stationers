@@ -1,3 +1,5 @@
+"use client";
+
 import { Fragment } from "react";
 import "./Hero.css";
 import Button from "../components/Button";
@@ -61,7 +63,7 @@ function Hero() {
       {/* Background */}
       <div
         className="hero-background"
-        style={{ backgroundImage: `url("${heroBackground}")` }}
+        style={{ backgroundImage: `url("${heroBackground.src}")` }}
       />
 
       <div className="hero-overlay" />
@@ -100,7 +102,7 @@ function Hero() {
       </div>
 
       {/* Main Box */}
-      <img src={mainBox} alt="" className="hero-box-main" />
+      <img src={mainBox.src} alt="" className="hero-box-main" />
     </section>
   );
 }

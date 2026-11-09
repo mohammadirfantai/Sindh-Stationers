@@ -1,4 +1,6 @@
 
+"use client";
+
 import { useEffect, useRef } from "react";
 import "./HowItWorks.css";
 
@@ -66,7 +68,7 @@ function ProductSelectionVisual() {
     <div className="how-visual how-visual-products">
       {products.map((product) => (
         <div className="selection-product" key={product.name}>
-          <img src={product.image} alt={product.name} />
+          <img src={product.image.src} alt={product.name} />
 
           <div className="selection-product-info">
             <span className="selection-product-name">
@@ -113,7 +115,7 @@ function PriceChatVisual() {
       <div className="chat-incoming">
         <img
           className="chat-father-avatar"
-          src={fatherImage}
+          src={fatherImage.src}
           alt="Mohammad Irfan Tai"
         />
 
@@ -153,7 +155,7 @@ function OrderTrackerVisual() {
       <div className="order-tracker-divider" />
 
       <div className="order-product-card">
-        <img src={maskingTape} alt="Masking Tape" />
+        <img src={maskingTape.src} alt="Masking Tape" />
 
         <div className="order-product-info">
           <span className="order-product-name">
@@ -248,7 +250,7 @@ function HowItWorks() {
       ref={sectionRef}
       className="how-it-works"
       id="how-it-works"
-      style={{ backgroundImage: `url("${sectionBg}")` }}
+      style={{ backgroundImage: `url("${sectionBg.src}")` }}
     >
       <div className="how-it-works-container">
 

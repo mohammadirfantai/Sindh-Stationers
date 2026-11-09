@@ -12,18 +12,12 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-
-/* ==============================
-   CUSTOM SCROLLBAR
-============================== */
-
-/* Firefox */
-html {
   scrollbar-width: thin;
   scrollbar-color: #FFFFFF #18352f;
+  scrollbar-gutter: auto;
 }
+
+/* Custom scrollbar */
 
 /* Chrome, Edge and Safari */
 ::-webkit-scrollbar {

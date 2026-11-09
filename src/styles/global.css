@@ -34,6 +34,7 @@ body {
   margin: 0;
   font-family: var(--font-family-body);
   font-weight: var(--font-weight-medium);
+  background-color: #f5f1e8;
 }
 
 h1,
@@ -51,108 +52,6 @@ input,
 select,
 textarea {
   font: inherit;
-}
-
-@layer components {
-  .type-navigation,
-  .type-hero-subheading,
-  .type-section-subheading,
-  .type-card-description,
-  .type-stat-description {
-    font-family: var(--font-family-body);
-    font-size: var(--type-size-body);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--type-line-height-body);
-    letter-spacing: var(--type-letter-spacing-tight);
-  }
-
-  .type-navigation {
-    line-height: var(--type-line-height-compact);
-  }
-
-  .type-eyebrow,
-  .type-section-eyebrow {
-    font-family: var(--font-family-body);
-    font-size: var(--type-size-eyebrow);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--type-line-height-eyebrow);
-    letter-spacing: var(--type-letter-spacing-eyebrow);
-  }
-
-  .type-hero-heading {
-    font-family: var(--font-family-heading);
-    font-size: var(--type-size-hero-heading);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--type-line-height-display);
-    letter-spacing: var(--type-letter-spacing-tight);
-  }
-
-  .type-button,
-  .type-card-button {
-    font-family: var(--font-family-body);
-    font-size: var(--type-size-button);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--type-line-height-body);
-    letter-spacing: var(--type-letter-spacing-tight);
-  }
-
-  .type-section-heading,
-  .type-stat-number {
-    font-family: var(--font-family-heading);
-    font-size: var(--type-size-section-heading);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--type-line-height-display);
-    letter-spacing: var(--type-letter-spacing-tight);
-  }
-
-  .type-quick-facts-heading,
-  .type-card-heading,
-  .type-footer-heading {
-    font-family: var(--font-family-heading);
-    font-size: var(--type-size-card-heading);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--type-line-height-compact);
-    letter-spacing: var(--type-letter-spacing-tight);
-  }
-
-  .type-card-eyebrow {
-    font-family: var(--font-family-body);
-    font-size: var(--type-size-eyebrow);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--type-line-height-card-eyebrow);
-    letter-spacing: var(--type-letter-spacing-tight);
-  }
-
-  .type-footer-meta {
-    font-family: var(--font-family-body);
-    font-size: var(--type-size-button);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--type-line-height-footer);
-    letter-spacing: var(--type-letter-spacing-tight);
-  }
-
-  .type-brand-display {
-    font-family: var(--font-family-heading);
-    font-size: var(--type-size-brand-display);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--type-line-height-brand-display);
-    letter-spacing: var(--type-letter-spacing-brand);
-  }
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-family-body);
-  font-weight: var(--font-weight-medium);
-  background-color: #f5f1e8;
-}
-
-html {
-  scrollbar-gutter: auto;
-}
-
-body {
-  margin: 0;
 }
 
 .link-underline {

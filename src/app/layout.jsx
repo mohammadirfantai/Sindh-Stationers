@@ -1,7 +1,7 @@
 import "../index.css";
 import StructuredData from "./StructuredData";
 
-const siteUrl = new URL("https://sindhstationers.com/");
+const siteUrl = new URL("https://sindh-stationers.vercel.app/");
 const pageTitle = "Sindh Stationers | High Quality Packing Tape Supplier in Karachi";
 const pageDescription =
   "Looking for packing tape in Karachi? Sindh Stationers supplies Scotch tape, double-sided tape, masking tape and stretch film rolls for shops, businesses and everyday use. Contact us on WhatsApp for current prices and available sizes.";

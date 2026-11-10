@@ -1,5 +1,3 @@
-import darkLogo from "../assets/logos/Sindh Stationers Logo (Dark).svg";
-
 export default function manifest() {
   return {
     name: "Sindh Stationers",
@@ -11,7 +9,7 @@ export default function manifest() {
     theme_color: "#18352f",
     icons: [
       {
-        src: darkLogo.src,
+        src: "/Favicon.svg?v=2",
         sizes: "any",
         type: "image/svg+xml",
       },

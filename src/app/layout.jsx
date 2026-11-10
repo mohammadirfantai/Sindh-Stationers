@@ -1,11 +1,10 @@
 import "../index.css";
-import darkLogo from "../assets/logos/Sindh Stationers Logo (Dark).svg";
 import StructuredData from "./StructuredData";
 
 const siteUrl = new URL("https://sindhstationers.com/");
-const pageTitle = "Sindh Stationers | Packing Tape Supplier in Karachi";
+const pageTitle = "Sindh Stationers | High Quality Packing Tape Supplier in Karachi";
 const pageDescription =
-  "Buy quality packing tape in Karachi from Sindh Stationers. Explore Scotch tape, masking tape, double-sided tape and stretch film rolls. Ask for current prices on WhatsApp.";
+  "Looking for packing tape in Karachi? Sindh Stationers supplies Scotch tape, double-sided tape, masking tape and stretch film rolls for shops, businesses and everyday use. Contact us on WhatsApp for current prices and available sizes.";
 
 export const metadata = {
   metadataBase: siteUrl,
@@ -19,7 +18,7 @@ export const metadata = {
     follow: true,
   },
   icons: {
-    icon: [{ url: darkLogo.src, type: "image/svg+xml" }],
+    icon: [{ url: "/Favicon.svg?v=2", type: "image/svg+xml" }],
   },
   openGraph: {
     title: pageTitle,
@@ -29,14 +28,26 @@ export const metadata = {
     siteName: "Sindh Stationers",
     locale: "en_PK",
     type: "website",
-    // Add images: ["/og-image.jpg"] after that image exists in public/.
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        type: "image/jpeg",
+        alt: "Sindh Stationers, a high-quality packing tape supplier in Karachi, Pakistan.",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: pageTitle,
-    description:
-      "Quality packing tape and packaging supplies for homes, shops, businesses, and online sellers across Karachi. Ask for current prices on WhatsApp.",
-    // Add images: ["/og-image.jpg"] after that image exists in public/.
+    description: pageDescription,
+    images: [
+      {
+        url: "/og-image.jpg",
+        alt: "Sindh Stationers, a high-quality packing tape supplier in Karachi, Pakistan.",
+      },
+    ],
   },
   // Add verification.google here only after receiving the real Search Console token.
 };

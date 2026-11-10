@@ -1,5 +1,6 @@
 
 import "./product-card.css";
+import Image from "next/image";
 import Button from "./Button";
 
 function ProductCard({
@@ -22,12 +23,13 @@ function ProductCard({
       style={style}
       data-index={index}
     >
-      <img
+      <Image
         className="product-card-background"
-        src={image.src}
+        src={image}
         alt={`${name} product photo`}
         loading="lazy"
         decoding="async"
+        sizes="(max-width: 520px) 100vw, (max-width: 768px) 50vw, (max-width: 1100px) 50vw, 33vw"
       />
 
       <div className="product-card-gradient" />

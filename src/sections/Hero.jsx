@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
+import Image from "next/image";
 import "./Hero.css";
 import Button from "../components/Button";
 import useLoaderComplete from "../hooks/useLoaderComplete";
@@ -102,7 +103,13 @@ function Hero() {
       </div>
 
       {/* Main Box */}
-      <img src={mainBox.src} alt="" className="hero-box-main" />
+      <Image
+        src={mainBox}
+        alt=""
+        className="hero-box-main"
+        preload
+        sizes="(max-width: 480px) 90vw, (max-width: 768px) 75vw, (max-width: 1200px) 55vw, 669px"
+      />
     </section>
   );
 }

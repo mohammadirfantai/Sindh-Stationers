@@ -281,11 +281,14 @@
 
   clip-path: inset(100% 0 0 0);
 
-  transition: clip-path 1.4s cubic-bezier(0.76, 0, 0.24, 1);
+  animation: hero-box-reveal 1.4s
+    cubic-bezier(0.76, 0, 0.24, 1) 1.2s both;
 }
 
-.hero-loaded .hero-box-main {
-  clip-path: inset(0 0 0 0);
+@keyframes hero-box-reveal {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 /* ==============================
@@ -412,7 +415,7 @@
 
   .hero-box-main {
     clip-path: none;
-    transition: none;
+    animation: none;
   }
 
   .hero-letter,

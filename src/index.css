@@ -37,3 +37,56 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #6f8068;
 }
+
+@supports (-webkit-touch-callout: none) {
+  @media (hover: none) and (pointer: coarse) {
+    .faq-intro,
+    .faq-contact-card,
+    .faq-item,
+    .footer-main > *,
+    .footer-copyright,
+    .footer-credit,
+    .brands-eyebrow,
+    .brands-heading,
+    .brands-description,
+    .brand-item,
+    .products-eyebrow,
+    .products-heading,
+    .products-description,
+    .product-card-reveal,
+    .about-us-image,
+    .about-us-eyebrow,
+    .about-us-heading h2,
+    .about-us-divider,
+    .about-us-description p,
+    .about-us-button,
+    .about-us-stat,
+    .final-cta-eyebrow,
+    .final-cta-content h2,
+    .final-cta-description,
+    .final-cta-content > .button,
+    .final-cta-stat,
+    .how-section-header .how-eyebrow,
+    .how-section-header h2,
+    .how-section-header .how-header-description,
+    .how-step-card,
+    .how-bottom-cta,
+    .selection-product,
+    .order-tracker-header,
+    .order-tracker-divider,
+    .order-product-card,
+    .order-skeleton-card,
+    .why-choose-us-eyebrow,
+    .why-choose-us-heading h2,
+    .why-choose-us-description,
+    .why-card,
+    .no-hidden-costs-card,
+    .hero-letter,
+    .hero-word,
+    .hero-buttons,
+    .navbar-logo,
+    .navbar-links a {
+      filter: none !important;
+    }
+  }
+}

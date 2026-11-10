@@ -421,6 +421,11 @@ a.footer-social-link:hover {
     font-size: 14px;
     line-height: 1.55;
   }
+
+  .footer-contact li:nth-child(2) a span {
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
 }
 
 /* ========================================

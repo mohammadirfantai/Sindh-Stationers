@@ -29,18 +29,6 @@ const schema = {
       description:
         "Packing tape and packaging supplies for homes, shops, businesses, and online sellers across Karachi, Pakistan.",
       areaServed: karachiServiceArea,
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Packing tape and packaging supplies",
-        itemListElement: [
-          "Scotch Tape Super Yellowish",
-          "Scotch Tape Clear / Brown",
-          "Double Sided Foam Tape",
-          "Double Sided Tissue Tape",
-          "Masking Tape",
-          "Stretch Film Roll",
-        ].map((name) => ({ "@type": "Product", name })),
-      },
     },
     {
       "@type": "WebSite",
